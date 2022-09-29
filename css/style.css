@@ -17,7 +17,7 @@ body {
   display: flex;
   margin: auto;
   position: relative;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   max-width: fit-content;
 }
 /* #printableArea::after {
