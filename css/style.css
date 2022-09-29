@@ -1,5 +1,6 @@
 body {
   background-color: red;
+  border: 1px solid black;
 }
 @media print {
   .no-print {
