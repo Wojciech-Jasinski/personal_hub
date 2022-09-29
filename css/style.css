@@ -1,0 +1,70 @@
+body {
+  background-color: red;
+}
+#printableArea {
+  box-sizing: content-box;
+  display: flex;
+  margin: auto;
+  position: relative;
+  border: 3px solid black;
+  max-width: fit-content;
+}
+/* #printableArea::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  border: 1px solid greenyellow;
+  height: 29.7cm;
+  width: 21cm;
+} */
+.page {
+  min-height: 29.7cm;
+  width: 21cm;
+  /* display: flex;
+  flex-direction: column; */
+
+  background-color: bisque;
+}
+.button {
+  width: 150px;
+  height: 30px;
+  background-color: goldenrod;
+  border: 3px solid blueviolet;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.page__header {
+  background-color: teal;
+  flex-basis: 2cm;
+  flex-grow: 1;
+}
+.page__content {
+  background-color: firebrick;
+  flex-basis: 25.7cm;
+  flex-grow: 1;
+  flex-wrap: wrap-reverse;
+}
+.page__content__main {
+  flex-basis: 300px;
+  flex-grow: 710;
+  background-color: darkmagenta;
+}
+.page__content__aside {
+  flex-grow: 1;
+  flex-basis: 200px;
+  background-color: aliceblue;
+}
+.page__footer {
+  background-color: darkgreen;
+  flex-basis: 2cm;
+  flex-grow: 1;
+}

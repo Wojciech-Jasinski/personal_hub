@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Hub</title>
+
+    <link rel="stylesheet" href="./css/normalizer.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <button class="button">
+        <a href="./index.html">Strona domowa</a>
+      </button>
+    </nav>
+
+    <input
+      class="button"
+      type="button"
+      onclick="printDiv('printableArea')"
+      value="Print the CV!"
+    />
+
+    <div id="printableArea">
+      <div class="page flex-column">
+        <section class="page__header"><h1>Curiculum Vitae</h1></section>
+
+        <section class="page__content flex-row">
+          <section class="page__content__main flex-column">
+            <article class="about-me"></article>
+
+            <article class="job-exp"></article>
+          </section>
+
+          <section class="page__content__aside flex-column">ghdfhdfh</section>
+        </section>
+
+        <section class="page__footer"></section>
+      </div>
+    </div>
+
+    <script>
+      function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+      }
+    </script>
+  </body>
+</html>
