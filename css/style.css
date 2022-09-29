@@ -8,8 +8,8 @@ body {
     visibility: hidden;
   }
   body {
-    margin: 20px !important;
-    padding: 20px !important;
+    margin: -30px !important;
+    padding: -30px !important;
   }
 }
 #printableArea {
