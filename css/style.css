@@ -6,6 +6,10 @@ body {
     display: none;
     visibility: hidden;
   }
+  body {
+    margin: 0;
+    padding: 0;
+  }
 }
 #printableArea {
   box-sizing: content-box;
