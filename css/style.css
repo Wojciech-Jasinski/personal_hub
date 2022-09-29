@@ -1,6 +1,12 @@
 body {
   background-color: red;
 }
+@media print {
+  .no-print {
+    display: none;
+    visibility: hidden;
+  }
+}
 #printableArea {
   box-sizing: content-box;
   display: flex;
