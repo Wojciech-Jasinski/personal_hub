@@ -1,5 +1,24 @@
 * {
+  font-family: "Tomorrow", sans-serif;
+  font-size: inherit;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+}
+:root {
+  --color-main: rgb(189, 172, 81, 0.5);
+  --color-accented1: rgba(136, 255, 0, 0.1);
+  --color-accented2: rgba(0, 102, 255, 0.1);
+
+  --color-white: rgba(255, 255, 255, 0.5);
+  --color-black: rgba(0, 0, 0, 0.5);
+
+  --font-page-title: 25px;
+  --font-big: 18px;
+  --font-medium: 15px;
+  --font-small: 12px;
+}
+body {
+  font-size: var(--font-medium);
 }

@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Hub</title>
+    <title>CV WJ</title>
 
     <link rel="stylesheet" href="./css/normalizer.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="no-print">
@@ -22,18 +29,20 @@
           GitHub
         </a>
       </button>
-    </nav>
 
-    <input
-      class="button no-print"
-      type="button"
-      onclick="printDiv('printableArea')"
-      value="Print the CV!"
-    />
+      <input
+        class="button no-print"
+        type="button"
+        onclick="printDiv('printableArea')"
+        value="Print the CV!"
+      />
+    </nav>
 
     <div id="printableArea">
       <div class="page flex-column">
-        <section class="page__header"><h1>Curiculum Vitae</h1></section>
+        <section class="page__header">
+          <h1 class="page__header__title">Curiculum Vitae</h1>
+        </section>
 
         <section class="page__content flex-row">
           <section class="page__content__main flex-column">
@@ -42,12 +51,90 @@
               Exercitationem facilis at itaque laborum nihil rerum consectetur
               corporis voluptate, porro consequuntur ipsa assumenda nisi
               consequatur pariatur odio distinctio culpa harum voluptatum?
+              <article class="about-me">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Exercitationem facilis at itaque laborum nihil rerum consectetur
+                corporis voluptate, porro consequuntur ipsa assumenda nisi
+                consequatur pariatur odio distinctio culpa harum voluptatum?
+              </article>
             </article>
 
-            <article class="job-exp"></article>
+            <section class="job-exp">
+              <h3 class="job-exp__title">Job EXP</h3>
+              <article class="job-exp__container">
+                <div class="job-exp__container__item1">
+                  <time class="job-exp__time">01.2019r. - 03.2021r.</time>
+                </div>
+                <div class="job-exp__container__item2">
+                  <h4 class="job-exp__place">
+                    Bogart-Meble (Czarna k. Łańcuta)
+                  </h4>
+                  <h5 class="job-exp__position">Logistyk</h5>
+                  <ul class="job-exp__responsibilities flex-column">
+                    <li>
+                      Planowanie oraz kontrolowanie tras kierowców z towarem
+                      własnym w systemie klasy ERP/CRM
+                    </li>
+                    <li>Znajdywanie towaru aby ograniczyć puste przejazdy</li>
+                    <li>Rozliczanie kierowców</li>
+                    <li>
+                      Tworzenie i rozwijanie funkcjonalności w oparciu o Arkusze
+                      Google
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="job-exp__container show">
+                <div class="job-exp__container__item1">
+                  <time class="job-exp__time">01.2019r. - 03.2021r.</time>
+                </div>
+                <div class="job-exp__container__item2">
+                  <h4 class="job-exp__place">FUH Akar (Rzeszów)</h4>
+                  <h5 class="job-exp__position">Spedytor międzynarodowy</h5>
+                  <ul class="job-exp__responsibilities flex-column">
+                    <li>Spedycja międzynarodowa pojazdami z DMC 3,5t.</li>
+                    <li>
+                      Rozwijanie/usprawnianie zarządzania trasami kierowców.
+                    </li>
+                    <li>
+                      Samodzielne stworzenie współdzielonego systemu do
+                      tworzenia zleceń, zapisywania tras kierowców oraz
+                      monitorowania stanu płatności w oparciu o Arkusze Google.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="job-exp__container show show--last">
+                <div class="job-exp__container__item1">
+                  <time class="job-exp__time">08.2017r. - 02.2018r.</time>
+                </div>
+                <div class="job-exp__container__item2">
+                  <h4 class="job-exp__place">Bispol (Łańcut)</h4>
+                  <h5 class="job-exp__position">Pracownik produkcji</h5>
+                  <ul class="job-exp__responsibilities flex-column">
+                    <li>
+                      Praca na hali na wielu stanowiskach w kolejności:
+                      pracownik na lini produkcyjnej, operator dochodzący,
+                      operator na lini, operator maszyny do nawijania knota.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </section>
           </section>
 
-          <section class="page__content__aside flex-column">ghdfhdfh</section>
+          <section class="page__content__aside flex-column">
+            <section class="basic-info flex-column">
+              <figure class="photo">
+                <!-- <img class="test" src="./photo.jpg" /> -->
+              </figure>
+              <h2 class="basic-info__name">Wojciech Jasiński</h2>
+              <p class="basic-info__item">tel: 721 729 232</p>
+              <p class="basic-info__item">e-mail: jasiom8@gmail.com</p>
+            </section>
+          </section>
         </section>
 
         <section class="page__footer">stupkii</section>
