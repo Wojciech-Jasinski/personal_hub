@@ -44,9 +44,12 @@
 }
 .button {
   width: 150px;
-  height: 30px;
+  height: 100%;
+  padding: 5px;
   background-color: goldenrod;
   border: 3px solid blueviolet;
+  cursor: pointer;
+  color: red;
 }
 .flex-column {
   display: flex;
@@ -58,16 +61,17 @@
 }
 .page__header {
   background-color: var(--color-accented1);
-  flex-basis: 2cm;
-  flex-grow: 1;
+  font-size: var(--font-page-title);
+  /* flex-basis: 1.6em; */
+  /* flex-grow: 0.1; */
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.page__header__title {
-  font-size: var(--font-page-title);
-}
+
 .page__content {
   /* background-color: var(--color-white); */
   flex-basis: 25.7cm;
@@ -100,8 +104,12 @@
 }
 .page__footer {
   background-color: var(--color-accented1);
-  flex-basis: 2cm;
-  flex-grow: 1;
+  /* flex-basis: 2cm; */
+  /* flex-grow: 1; */
+  font-size: var(--font-small);
+  text-align: center;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
 }
 
 .job-exp {
@@ -134,7 +142,9 @@
   border-radius: 2px 2px 30px 30px;
 }
 .job-exp__container__item1 {
+  text-align: center;
   width: min-content;
+  font-size: var(--font-small);
 }
 .job-exp__container__item2 {
   display: flex;
@@ -143,6 +153,7 @@
   /* width: fit-content; */
   /* margin: 10px; */
 }
+
 .job-exp__responsibilities {
   font-size: var(--font-small);
 }

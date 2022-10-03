@@ -22,3 +22,14 @@
 body {
   font-size: var(--font-medium);
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+nav {
+  /* margin: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
