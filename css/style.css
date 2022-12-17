@@ -1,5 +1,5 @@
 /* body {
-  background-color: red;
+  background-color: black;
   border: 1px solid black;
 } */
 @media print {
@@ -7,21 +7,17 @@
     display: none;
     visibility: hidden;
   }
-  /* body {
-    margin: -30px !important;
-    padding: -30px !important;
-  } */
 }
 #printableArea {
   box-sizing: content-box;
   display: flex;
   margin: auto;
+
   position: relative;
-  /* border: 3px solid black; */
+  /* border: 1px solid red; */
   max-width: fit-content;
 
-  box-shadow: 0px 10px 20px 1px rgb(0, 0, 0),
-    0px 10px 20px 1px rgb(255, 255, 255);
+  box-shadow: 0px 5px 15px 1px rgb(0, 0, 0), 0px 5px 15px 1px rgb(255, 255, 255);
 }
 /* #printableArea::after {
   content: "";
@@ -145,6 +141,7 @@
   text-align: center;
   width: min-content;
   font-size: var(--font-small);
+  font-weight: 500;
 }
 .job-exp__container__item2 {
   display: flex;
@@ -153,9 +150,17 @@
   /* width: fit-content; */
   /* margin: 10px; */
 }
-
+.job-exp__place {
+  font-size: var(--font-normal);
+  font-weight: 700;
+}
+.job-exp__position {
+  font-size: var(--font-normal);
+  font-weight: 500;
+}
 .job-exp__responsibilities {
   font-size: var(--font-small);
+  font-weight: 400;
 }
 .basic-info {
   gap: 10px;

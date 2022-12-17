@@ -12,33 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <nav class="no-print">
-      <button class="button">
-        <a href="./index.html">Strona domowa</a>
-      </button>
-      <button class="button">
-        <a
-          class="no-print"
-          href="https://github.com/Wojciech-Jasinski/personal_hub"
-        >
-          GitHub czyli repozytorium
-        </a>
-      </button>
 
-      <input
-        class="button no-print"
-        type="button"
-        onclick="printDiv('printableArea')"
-        value="Print the CV!
-working on PC
-(chrome)"
-      />
-    </nav>
+  <body>
+    <nav w3-include-html="partials/menu.html"></nav>
 
     <div id="printableArea">
       <div class="page flex-column">
@@ -158,5 +138,7 @@ working on PC
         document.body.innerHTML = originalContents;
       }
     </script>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
