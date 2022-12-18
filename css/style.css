@@ -45,7 +45,21 @@
   background-color: goldenrod;
   border: 3px solid blueviolet;
   cursor: pointer;
-  color: red;
+  /* color: red; */
+
+  transition-property: scale, box-shadow, background-color;
+  transition-duration: 250ms;
+  transition-delay: 150ms;
+}
+.button:hover,
+.button:focus {
+  transition-delay: 0ms;
+  background-color: rgb(240, 195, 83);
+  scale: 1.05;
+  box-shadow: inset 0 0 2px 1px blueviolet, 0 0 10px 3px black;
+}
+button > a {
+  color: black;
 }
 .flex-column {
   display: flex;
