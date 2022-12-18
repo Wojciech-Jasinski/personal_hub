@@ -1,22 +1,24 @@
-<button class="button">
-  <a href="./index.html">Strona domowa</a>
-</button>
+<a class="button" href="./index.html">Strona domowa</a>
 
-<button class="button">
-  <a href="./cv.html">Curiculum Vitae</a>
-</button>
+<a class="button" href="./cv.html">Curiculum Vitae</a>
 
-<button class="button">
-  <a href="https://github.com/Wojciech-Jasinski/personal_hub">
-    GitHub czyli repozytorium
-  </a>
-</button>
-
-<input
+<a
   class="button"
-  type="button"
-  onclick="printDiv('printableArea')"
-  value="Print the CV!
+  href="https://github.com/Wojciech-Jasinski/personal_hub"
+  target="_blank"
+>
+  GitHub czyli repozytorium
+  <img class="button__icon" src="../icons/new-tab.svg" width="16" height="16" />
+</a>
+
+<div class="button button-input">
+  <input
+    class="button__text"
+    type="button"
+    onclick="printDiv('printableArea')"
+    value="Print the CV!
 working on PC
 (chrome)"
-/>
+  />
+  <img class="button__icon" src="../icons/print.svg" width="16" height="16" />
+</div>
