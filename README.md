@@ -2,4 +2,4 @@
 
 my personal hub for all my projects
 
-icons: https://www.svgrepo.com/svg/340719/new-tab
+icons: https://www.svgrepo.com/collection/carbon-design-line-icons/23
