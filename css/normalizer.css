@@ -26,11 +26,11 @@
 
   /* new pallet? */
 
-  --color-main: rgba(57, 99, 96, 0.3);
+  /* --color-main: rgba(57, 99, 96, 0.3); */
   /* --color-main: rgba(91, 150, 60, 0.5); */
-  --color-accented1: rgba(108, 157, 127, 0.3);
+  /* --color-accented1: rgba(108, 157, 127, 0.3); */
   /* --color-accented2: rgba(91, 150, 60, 0.3); */
-  --color-accented2: rgba(82, 58, 74, 0.3);
+  /* --color-accented2: rgba(82, 58, 74, 0.3); */
 
   --color-black: rgba(50, 37, 53, 1);
 }
