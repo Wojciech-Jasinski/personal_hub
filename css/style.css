@@ -199,9 +199,19 @@
   font-size: var(--font-normal);
   justify-content: center;
   align-items: center;
+  border: 1px solid var(--color-accented2);
+  border-radius: 50% 50% 10px 10px;
+  gap: 0;
+}
+.basic-info__name {
+  padding: 5px;
 }
 .basic-info__item {
   font-size: var(--font-small);
+  padding: 5px;
+  border-top: 1px solid var(--color-accented2);
+  width: 100%;
+  text-align: center;
 }
 .photo {
   background-image: url(../photo.jpg);
