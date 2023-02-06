@@ -280,3 +280,8 @@
   border-collapse: collapse;
   padding: 3px;
 }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
