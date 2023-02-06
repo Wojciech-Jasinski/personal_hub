@@ -143,7 +143,7 @@
 }
 
 .job-exp {
-  gap: 5px;
+  gap: 3px;
 }
 .job-exp__title {
   /* display: flex;
@@ -151,7 +151,8 @@
   align-items: flex-start; */
   width: 100%;
   padding: 5px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
+  text-align: center;
 
   background-color: var(--color-accented2);
   border-radius: 30px 30px 2px 2px;
@@ -202,20 +203,20 @@
   font-weight: 400;
 }
 .basic-info {
-  gap: 10px;
   font-size: var(--font-normal);
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-accented2);
   border-radius: 50% 50% 10px 10px;
-  gap: 0;
+  background-color: var(--color-white);
+  /* padding: 0 5px 0 5px; */
 }
 .basic-info__name {
-  padding: 5px;
+  padding: 3px;
 }
 .basic-info__item {
   font-size: var(--font-small);
-  padding: 5px;
+  padding: 3px;
   border-top: 1px solid var(--color-accented2);
   width: 100%;
   text-align: center;
@@ -234,51 +235,75 @@
 }
 
 .skills {
-  gap: 10px;
+  /* gap: 3px; */
   font-size: var(--font-normal);
   justify-content: center;
   align-items: center;
 }
+.skills__title {
+  width: 100%;
+  border: 1px solid var(--color-main);
+  border-radius: 15px 15px 0 0;
+  background-color: var(--color-white);
+  padding: 7px;
+  text-align: center;
+  border-bottom: 0;
+}
 .skills ul {
   width: 100%;
+  /* gap: 3px; */
 }
 .skills ul > :first-child {
-  border-radius: 10px 10px 0 0;
-  border-top: 1px solid var(--color-accented2);
+  border-radius: 0;
+  border-top: 1px solid var(--color-main);
 }
 .skills ul > :last-child {
   border-radius: 0 0 10px 10px;
 }
 .skills li {
   font-size: var(--font-small);
-  border: 1px solid var(--color-accented2);
-  border-top: 0px;
-  border-collapse: collapse;
-  padding: 3px;
+  border: 1px solid var(--color-main);
+  /* border-top: 0px; */
+  /* background-color: var(--color-white); */
+
+  border-top: 0;
+  padding: 5px 7px;
 }
 
 .interests {
-  gap: 10px;
+  /* gap: 3px; */
   font-size: var(--font-normal);
   justify-content: center;
   align-items: center;
 }
+.interests__title {
+  width: 100%;
+  border: 1px solid var(--color-main);
+  border-radius: 15px 15px 0 0;
+  background-color: var(--color-white);
+  padding: 7px;
+  text-align: center;
+  border-bottom: 0;
+}
 .interests ul {
   width: 100%;
+  /* gap: 3px; */
 }
 .interests ul > :first-child {
-  border-radius: 10px 10px 0 0;
-  border-top: 1px solid var(--color-accented2);
+  border-radius: 0;
+  border-top: 1px solid var(--color-main);
 }
 .interests ul > :last-child {
   border-radius: 0 0 10px 10px;
 }
 .interests li {
   font-size: var(--font-small);
-  border: 1px solid var(--color-accented2);
-  border-top: 0px;
-  border-collapse: collapse;
-  padding: 3px;
+  border: 1px solid var(--color-main);
+  /* border-top: 0px; */
+  /* background-color: var(--color-white); */
+
+  border-top: 0;
+  padding: 5px 7px;
 }
 
 .menu {
