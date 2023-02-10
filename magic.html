@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/normalizer.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +18,115 @@
     />
   </head>
   <body>
-    <nav w3-include-html="partials/menu.html"></nav>
-    <div id="feed"></div>
+    <!-- <nav w3-include-html="partials/menu.html"></nav> -->
 
-    <script src="./js/app.js"></script>
+    <div class="card">
+      <div class="card__art"></div>
+      <div class="card__rules">
+        <div class="ability">
+          <div class="ability__cost">3</div>
+          <div class="ability__content">
+            <img
+              class="card__stats__value"
+              src="./magic/dice-black.svg"
+              width="20px"
+            />
+            <div class="card__stats__value on-top ability__content--value">
+              2
+            </div>
+          </div>
+        </div>
+
+        <div class="ability">
+          <div class="ability__cost ability__cost--blue">2</div>
+          <div class="ability__content">
+            <img
+              class="card__stats__value"
+              src="./magic/dice-blue.svg"
+              width="20px"
+            />
+            <div class="card__stats__value on-top ability__content--value">
+              3
+            </div>
+          </div>
+          <div class="ability__content small">
+            ulecz tyle obrażeń/zmęczenia dowolnemu ceolowi
+          </div>
+        </div>
+
+        <div class="ability">
+          <div class="ability__cost ability__cost--red">3</div>
+          <div class="ability__content">
+            <img
+              class="card__stats__value"
+              src="./magic/dice-orange.svg"
+              width="20px"
+            />
+            <div class="card__stats__value on-top ability__content--value">
+              1
+            </div>
+          </div>
+
+          <div class="ability__content">
+            <img
+              class="card__stats__value"
+              src="./magic/dice-black.svg"
+              width="20px"
+            />
+            <div class="card__stats__value on-top ability__content--value">
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__stats--container">
+        <div class="card__stats">
+          <img
+            class="card__stats__background"
+            src="./magic/physical-def.svg"
+            width="28px"
+          />
+          <img
+            class="card__stats__value"
+            src="./magic/dice-orange.svg"
+            width="20px"
+          />
+          <div class="card__stats__value on-top">1</div>
+        </div>
+        <div class="card__stats">
+          <img
+            class="card__stats__background"
+            src="./magic/magical-def.svg"
+            width="28px"
+          />
+          <img
+            class="card__stats__value"
+            src="./magic/dice-black.svg"
+            width="20px"
+          />
+          <div class="card__stats__value on-top">2</div>
+        </div>
+        <div class="card__stats">
+          <img
+            class="card__stats__background"
+            src="./magic/weight.svg"
+            width="28px"
+          />
+          <div class="card__stats__value">4</div>
+        </div>
+        <div class="card__stats">
+          <img
+            class="card__stats__value"
+            src="./magic/upgrades.svg"
+            width="25px"
+          />
+          <div class="card__stats__value on-top card__stats__value--upgrade">
+            2
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./js/menu.js"></script>
   </body>
 </html>
