@@ -21,18 +21,27 @@
     <!-- <nav w3-include-html="partials/menu.html"></nav> -->
 
     <div class="card">
-      <div class="card__art"></div>
+      <div class="card__art">
+        <img
+          class="card__stats__background"
+          src="./magic/mieczyk.png"
+          width="100%"
+        />
+      </div>
       <div class="card__rules">
         <div class="ability">
           <div class="ability__cost">3</div>
           <div class="ability__content">
-            <img
+            <!-- <img
               class="card__stats__value"
               src="./magic/dice-black.svg"
               width="20px"
-            />
+            /> -->
+            <svg class="card__stats__value" width="20px" height="20px">
+              <use href="./magic/dice-black.svg"></use>
+            </svg>
             <div class="card__stats__value on-top ability__content--value">
-              2
+              4
             </div>
           </div>
         </div>
