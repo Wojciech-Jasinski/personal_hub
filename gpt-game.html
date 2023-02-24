@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>GPT made game</title>
+
+      <link rel="stylesheet" href="./css/normalizer.css" />
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/cards.css" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+      />
+
+      <style>
+        #game {
+          margin: auto;
+          width: 1200px;
+          height: 1200px;
+          border: 1px solid black;
+          position: relative;
+        }
+        #player {
+          width: 30px;
+          height: 30px;
+          background-color: red;
+          border-radius: 50%;
+          position: absolute;
+          top: 285px;
+          left: 385px;
+        }
+        .enemy {
+          width: 20px;
+          height: 20px;
+          background-color: blue;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      </style>
+    </head>
+    <body>
+      <nav w3-include-html="partials/menu.html" class="menu"></nav>
+      <div id="game">
+        <div id="player"></div>
+      </div>
+      <script>
+        const player = document.getElementById("player");
+        const enemies = [];
+        const keysDown = new Set();
+
+        document.addEventListener("keydown", (event) => {
+          keysDown.add(event.key);
+        });
+
+        document.addEventListener("keyup", (event) => {
+          keysDown.delete(event.key);
+        });
+
+        function updatePosition() {
+          // Move player
+          const speed = 5;
+          let dxPlayer = 0;
+          let dyPlayer = 0;
+
+          if (keysDown.has("w")) dyPlayer = -speed;
+          if (keysDown.has("a")) dxPlayer = -speed;
+          if (keysDown.has("s")) dyPlayer = speed;
+          if (keysDown.has("d")) dxPlayer = speed;
+
+          const playerX = player.offsetLeft + dxPlayer;
+          const playerY = player.offsetTop + dyPlayer;
+
+          if (playerX >= 0 && playerX <= 1170) {
+            player.style.left = playerX + "px";
+          }
+          if (playerY >= 0 && playerY <= 1170) {
+            player.style.top = playerY + "px";
+          }
+
+          // Move enemies
+          for (const enemy of enemies) {
+            // AI for enemies
+            const playerX = player.offsetLeft + 15;
+            const playerY = player.offsetTop + 15;
+            const enemyX = enemy.element.offsetLeft + 10;
+            const enemyY = enemy.element.offsetTop + 10;
+
+            const dx = playerX - enemyX;
+            const dy = playerY - enemyY;
+
+            if (dx > 0) {
+              enemy.element.style.left = enemy.element.offsetLeft + 1 + "px";
+            } else if (dx < 0) {
+              enemy.element.style.left = enemy.element.offsetLeft - 1 + "px";
+            }
+
+            if (dy > 0) {
+              enemy.element.style.top = enemy.element.offsetTop + 1 + "px";
+            } else if (dy < 0) {
+              enemy.element.style.top = enemy.element.offsetTop - 1 + "px";
+            }
+
+            // Check collision with player
+            const dxPlayer =
+              player.offsetLeft + 15 - (enemy.element.offsetLeft + 10);
+            const dyPlayer =
+              player.offsetTop + 15 - (enemy.element.offsetTop + 10);
+            const distancePlayer = Math.sqrt(dxPlayer ** 2 + dyPlayer ** 2);
+
+            if (distancePlayer < 25) {
+              // Collision detected, game over
+              window.alert("Game over!");
+              document.location.reload();
+            }
+          }
+          // Add new enemies
+          if (Math.random() < 0.02) {
+            const newEnemy = document.createElement("div");
+            newEnemy.classList.add("enemy");
+            newEnemy.style.top = Math.floor(Math.random() * 1170) + "px";
+            newEnemy.style.left = Math.floor(Math.random() * 1170) + "px";
+            document.getElementById("game").appendChild(newEnemy);
+            enemies.push({ element: newEnemy });
+            console.log("!");
+          }
+
+          // Remove enemies that have gone off screen
+          for (let i = 0; i < enemies.length; i++) {
+            const enemy = enemies[i];
+            if (
+              enemy.element.offsetLeft < -20 ||
+              enemy.element.offsetLeft > 1220 ||
+              enemy.element.offsetTop < -20 ||
+              enemy.element.offsetTop > 1220
+            ) {
+              enemy.element.remove();
+              enemies.splice(i, 1);
+            }
+          }
+
+          // Repeat updatePosition function every 16 milliseconds
+          setTimeout(updatePosition, 16);
+        }
+
+        updatePosition();
+      </script>
+      <script src="./js/menu.js"></script>
+    </body>
+  </html>
+</html>
